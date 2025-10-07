@@ -37,8 +37,11 @@ function UserForm({ userToEdit, onSuccess, onCancel }) {
     const userData = {
       name: formData.name,
       email: formData.email,
-      password: formData.password,
     };
+
+    if (!userToEdit || formData.password) {
+      userData.password = formData.password;
+    }
 
     try {
       if (userToEdit) {

@@ -59,7 +59,7 @@ function ProductList({ onEdit }) {
               </div>
               <p className="product-description">{product.description}</p>
               <div className="product-details">
-                <p className="product-price">${product.price.toFixed(2)}</p>
+                <p className="product-price">${product.price != null ? product.price.toFixed(2) : 'N/A'}</p>
                 <p className="product-category">{product.category}</p>
               </div>
               {product.tags && product.tags.length > 0 && (
