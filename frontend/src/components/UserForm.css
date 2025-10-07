@@ -1,0 +1,87 @@
+.user-form-container {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.user-form-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.user-form .error {
+  background-color: #fee;
+  color: #c33;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.user-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.user-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.user-form .form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.user-form .form-group input:focus {
+  outline: none;
+  border-color: #4299e1;
+}
+
+.user-form .form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.user-form .btn-submit,
+.user-form .btn-cancel {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.user-form .btn-submit {
+  background-color: #48bb78;
+  color: white;
+}
+
+.user-form .btn-submit:hover:not(:disabled) {
+  background-color: #38a169;
+}
+
+.user-form .btn-submit:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.user-form .btn-cancel {
+  background-color: #e2e8f0;
+  color: #333;
+}
+
+.user-form .btn-cancel:hover {
+  background-color: #cbd5e0;
+}
