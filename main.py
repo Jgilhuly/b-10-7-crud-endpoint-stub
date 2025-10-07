@@ -3,6 +3,7 @@ from typing import List
 import uvicorn
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 from models import Product, ProductCreate, ProductUpdate, User, UserCreate, UserUpdate
 from database import db
@@ -11,6 +12,14 @@ app = FastAPI(
     title="Product CRUD API",
     description="A simple CRUD API for managing products",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
