@@ -40,10 +40,17 @@ function ProductForm({ productToEdit, onSuccess, onCancel }) {
     setLoading(true);
     setError(null);
 
+    const price = parseFloat(formData.price);
+    if (isNaN(price) || price < 0) {
+      setError('Please enter a valid price');
+      setLoading(false);
+      return;
+    }
+
     const productData = {
       name: formData.name,
       description: formData.description,
-      price: parseFloat(formData.price),
+      price,
       category: formData.category,
       tags: formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag),
       in_stock: formData.in_stock,
